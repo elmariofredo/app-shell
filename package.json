@@ -1,0 +1,25 @@
+{
+  "name": "app-shell",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --env.dev --hot"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cycle/dom": "12.2.5",
+    "@cycle/xstream-run": "3.1.0",
+    "xstream": "6.4.0"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "2.2.4",
+    "bower": "1.7.9",
+    "html-webpack-plugin": "2.22.0",
+    "typescript": "2.0.3",
+    "webpack": "2.1.0-beta.25",
+    "webpack-dev-server": "2.1.0-beta.6"
+  }
+}

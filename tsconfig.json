@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "es2015",
+        "target": "es2015",
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "outDir": "out-tsc",
+        "lib": [
+            "dom",
+            "es2015"
+        ],
+        "mapRoot": "./",
+        "moduleResolution": "node"
+    }
+}
