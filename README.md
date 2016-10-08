@@ -5,7 +5,7 @@ Library/Framework agnostic application shell for lazy loading multiple apps into
 
 ## Example
 
-Checkout and run [/elmariofredo/react-pearl](/elmariofredo/react-pearl) with `npm run build && npm run build:serve`
+Checkout and run [/elmariofredo/react-pearl](https://github.com/elmariofredo/react-pearl) with `npm run build && npm run build:serve`
 
 $ `npm start`
 
