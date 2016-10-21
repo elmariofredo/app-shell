@@ -4,7 +4,7 @@ const appName = /\/([^/]*)/.exec( window.location.pathname )[1];
 
 if ( appName !== '' ) {
 
-  SystemJS.import( 'http://localhost:8081/static/js/main.js' )
+  SystemJS.import( 'http://localhost:8081/app.js' )
     .then(( app ) => {
 
       if ( typeof app.main !== 'function' ) {
