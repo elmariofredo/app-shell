@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/systemjs": "0.19.31",
+    "app-shell-toolbox": "1.0.0",
     "systemjs": "0.19.39"
   },
   "devDependencies": {

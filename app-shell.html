@@ -94,18 +94,19 @@
         HTMLImports.whenReady(function () {
             Polymer({
                 is: 'app-shell',
-                attached: function() {
-                    document.querySelector( '[paper-drawer-toggle]' )
-                            .addEventListener( 'tap', drawerToggle );
+                ready: function() {
+                  console.log( this );
+                    this.$$( '[paper-drawer-toggle]' )
+                            .addEventListener( 'tap', drawerToggle.bind(this) );
                 },
                 detached: function() {
-                    document.querySelector( '[paper-drawer-toggle]' )
-                            .removeEventListener( 'tap', drawerToggle );
+                    this.$$( '[paper-drawer-toggle]' )
+                            .removeEventListener( 'tap', drawerToggle.bind(this) );
                 }
             });
         });
 
-        function drawerToggle() { document.querySelector( 'app-drawer' ).toggle() }
+        function drawerToggle() { this.$$( 'app-drawer' ).toggle() }
 
     </script>
 </dom-module>

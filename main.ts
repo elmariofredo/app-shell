@@ -4,6 +4,8 @@ const appName = /\/([^/]*)/.exec( window.location.pathname )[1];
 
 if ( appName !== '' ) {
 
+  window.__AppShell_publicPath__ = 'http://localhost:8081/';
+
   SystemJS.import( 'http://localhost:8081/app.js' )
     .then(( app ) => {
 
