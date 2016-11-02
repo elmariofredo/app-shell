@@ -1,3 +1,4 @@
+import 'script!systemjs/dist/system';
 import 'whatwg-fetch';
 import * as objectAssign from 'object-assign';
 import { shellConfig } from './constants';
