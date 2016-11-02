@@ -1,3 +1,4 @@
+<!--suppress ALL -->
 <link rel="import" href="/bower_components/polymer/polymer.html">
 <link rel="import" href="/bower_components/iron-icons/iron-icons.html">
 <link rel="import" href="/bower_components/paper-icon-button/paper-icon-button.html">
@@ -95,7 +96,6 @@
             Polymer({
                 is: 'app-shell',
                 ready: function() {
-                  console.log( this );
                     this.$$( '[paper-drawer-toggle]' )
                             .addEventListener( 'tap', drawerToggle.bind(this) );
                 },

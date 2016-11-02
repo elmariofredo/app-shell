@@ -1,30 +1,18 @@
-import 'script!systemjs/dist/system';
+import { loadBootConfig, extractAppName, loadPearl } from './load-helpers';
 
-const appName = /\/([^/]*)/.exec( window.location.pathname )[1];
+loadBootConfig( '/api/boot' ).then(( bootConfig: any ) => {
 
-if ( appName !== '' ) {
+  const appName = extractAppName( window.location.pathname );
 
-  window.__AppShell_publicPath__ = 'http://localhost:8081/';
+  if ( bootConfig.pearls[ appName ] ) {
 
-  SystemJS.import( 'http://localhost:8081/app.js' )
-    .then(( app ) => {
+    loadPearl( appName, bootConfig );
 
-      if ( typeof app.main !== 'function' ) {
+  } else {
 
-        throw new Error( `Unable to find 'main' function` );
+    throw new Error( 'App pearl no defined' );
 
-      }
+  }
 
-      app.main( {
-        system: {
-          mountPoint: 'app-shell-content'
-        },
-        user: {
-          name: 'John',
-          surname: 'Doe'
-        }
-      }, () => console.log( `App '${ appName }' loaded` ) );
+});
 
-    });
-
-}

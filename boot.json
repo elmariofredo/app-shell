@@ -1,0 +1,13 @@
+{
+  "user": {
+    "id": 1,
+    "name": "John",
+    "surname": "Doe"
+  },
+  "pearls": {
+    "react": {
+      "publicPath": "http://localhost:8081/",
+      "main": "app.js"
+    }
+  }
+}

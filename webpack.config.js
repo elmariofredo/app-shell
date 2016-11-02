@@ -1,10 +1,3 @@
-const { resolve } = require( 'path');
-
-const webpack = require('webpack');
-
-// plugins
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-
 module.exports = () => {
 
   return {
@@ -27,12 +20,16 @@ module.exports = () => {
     module: {
       loaders: [
         { test: /\.ts$/, loaders: [ 'awesome-typescript-loader' ], exclude: /node_modules/ },
-        // { test: /\.js$/, loaders: [ 'script-loader' ] }
       ]
     },
 
     devServer: {
-      historyApiFallback: true
+      historyApiFallback: true,
+      proxy: {
+        '/api': {
+          target: 'http://localhost:9001'
+        }
+      }
     }
 
   }

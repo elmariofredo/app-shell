@@ -21,5 +21,9 @@
     "iron-selector": "2.0-preview",
     "paper-spinner": "2.0-preview",
     "paper-styles": "2.0-preview"
+  },
+  "resolutions": {
+    "polymer": "2.0-preview",
+    "webcomponentsjs": "v1"
   }
 }
