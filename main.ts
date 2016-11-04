@@ -1,18 +1,10 @@
-import { loadBootConfig, extractAppName, loadPearl } from './load-helpers';
+import { AppShell } from 'app-shell-toolbox';
 
-loadBootConfig( '/api/boot' ).then(( bootConfig: any ) => {
+const appShell = new AppShell( '/api/boot', 'app-shell-content' );
 
-  const appName = extractAppName( window.location.pathname );
+const currentAppName = /\/([^/]*)/.exec( window.location.pathname )[1];
 
-  if ( bootConfig.pearls[ appName ] ) {
-
-    loadPearl( appName, bootConfig );
-
-  } else {
-
-    throw new Error( 'App pearl no defined' );
-
-  }
-
-});
-
+appShell.boot()
+  .then(() => {
+    appShell.loadApp( currentAppName )
+  });

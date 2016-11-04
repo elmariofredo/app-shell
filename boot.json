@@ -4,7 +4,7 @@
     "name": "John",
     "surname": "Doe"
   },
-  "pearls": {
+  "apps": {
     "react": {
       "publicPath": "http://localhost:8081/",
       "main": "app.js"
