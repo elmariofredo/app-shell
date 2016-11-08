@@ -8,6 +8,10 @@
     "react": {
       "publicPath": "http://localhost:8081/",
       "main": "app.js"
+    },
+    "angular2": {
+      "publicPath": "http://localhost:8082/",
+      "main": "main.bundle.js"
     }
   }
 }

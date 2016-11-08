@@ -19,15 +19,16 @@ module.exports = () => {
 
     module: {
       loaders: [
-        { test: /\.ts$/, loaders: [ 'awesome-typescript-loader' ], exclude: /node_modules/ },
+        { test: /\.ts$/, loaders: [ 'awesome-typescript-loader' ] },
       ]
     },
 
     devServer: {
       historyApiFallback: true,
+      host: '0.0.0.0',
       proxy: {
         '/api': {
-          target: 'http://localhost:9001'
+          target: 'http://app-shell-server:9001'
         }
       }
     }

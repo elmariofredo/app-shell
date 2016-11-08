@@ -3,9 +3,17 @@ App Shell
 
 Library/Framework agnostic application shell for lazy loading multiple apps into single window.
 
-## Install
+# Start demo
 
-$ `yarn`
+$ `docker-compose up`
+
+## Install/Start Client
+
+$ `yarn && yarn start`
+
+## Install/Start Mock server
+
+$ `cd mock && yarn && yarn start`
 
 ## Example
 

@@ -1,0 +1,18 @@
+version: '2'
+services:
+  app-shell-client:
+    build: .
+    ports:
+    - "8080:8080"
+  app-shell-server:
+    build: mock
+    ports:
+    - "9001:9001"
+  angular2-pearl:
+    image: ngparty/angular2-pearl:f75738d45b6d871a06d28710c6af9acf1c9045ba
+    ports:
+    - "8082:8082"
+  react-pearl:
+    image: ngparty/react-pearl:7054af7828a8c94b0b861358ae311bc8a6e9b81e
+    ports:
+    - "8081:8081"

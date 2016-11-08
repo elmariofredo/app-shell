@@ -1,11 +1,15 @@
 {
-  "name": "app-shell",
+  "name": "app-shell-server",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "postinstall": "bower install",
+    "postinstall": "bower install --allow-root",
     "start": "webpack-dev-server --env.dev --hot",
     "start:mock": "node server.js"
+  },
+  "config": {
+    "dockerScope": "ngparty",
+    "port": 8080
   },
   "keywords": [],
   "author": "",
