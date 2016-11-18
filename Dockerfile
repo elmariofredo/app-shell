@@ -1,5 +1,5 @@
 # source image from https://hub.docker.com/
-FROM kkarczmarczyk/node-yarn:6.7-slim
+FROM kkarczmarczyk/node-yarn:6.7
 
 # set path used by nodejs to lookup node_modules
 ENV NODE_PATH /app/embed/node_modules
@@ -12,8 +12,6 @@ WORKDIR /app/embed
 
 # add package.json during image build to be able to do npm install
 COPY . /app/embed
-
-RUN apt-get update && apt-get install -y git
 
 # run npm install
 RUN cd /app/embed && yarn
