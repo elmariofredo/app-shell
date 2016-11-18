@@ -13,8 +13,6 @@ WORKDIR /app/embed
 # add package.json during image build to be able to do npm install
 COPY . /app/embed
 
-#RUN apt-get update && apt-get install -y git
-
 # run npm install
 RUN cd /app/embed && yarn
 
