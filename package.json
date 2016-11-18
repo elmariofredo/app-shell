@@ -15,15 +15,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "app-shell-toolbox": "^2.0.0"
+    "app-shell-toolbox": "^1.1.0"
   },
   "devDependencies": {
-    "awesome-typescript-loader": "2.2.4",
-    "bower": "1.7.9",
-    "express": "4.14.0",
+    "awesome-typescript-loader": "^2.2.4",
+    "bower": "^1.7.9",
     "script-loader": "^0.7.0",
-    "typescript": "2.0.3",
-    "webpack": "2.1.0-beta.25",
-    "webpack-dev-server": "2.1.0-beta.6"
+    "typescript": "^2.0.3",
+    "webpack": "^2.1.0-beta.25",
+    "webpack-dev-server": "^2.1.0-beta.6"
   }
 }
